@@ -1,0 +1,15 @@
+
+<ul class="list-group">
+<app-post-list-item-component  *ngFor="let monPost of mesPosts, let i = index" 
+               [title]="monPost.title" 
+               [content]="monPost.content" 
+               [loveIt]="monPost.loveIts" 
+               [date]="monPost.created_at"
+                ></app-post-list-item-component>
+</ul>
+
+
+
+<!--<button class="btn btn-success"
+      [disabled]="!isAuth"
+      (click)="onAllumer()">Tout allumer</button>-->
