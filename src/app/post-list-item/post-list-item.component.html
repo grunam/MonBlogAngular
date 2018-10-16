@@ -1,0 +1,15 @@
+
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIt === 1,
+                'list-group-item-danger': loveIt === 0}">
+                <div class="row">
+                <div class="col-xs-6"><h3 style="margin-top:0px;">{{ title }}</h3></div>
+                <div class="col-xs-6 text-right"><span class="pull-right"> {{ date | date: 'short' }}</span></div>
+                </div>
+                
+                <p>{{ content }}</p>
+                <button class="btn btn-success" (click)="switchLoveIt()">Love it !!!</button>&nbsp;
+                <button class="btn btn-danger" (click)="switchHateIt()">Don't love it !!!</button>
+                <button class="btn btn-danger pull-right" (click)="deletePost()">Supprimer post</button>
+
+</li>
